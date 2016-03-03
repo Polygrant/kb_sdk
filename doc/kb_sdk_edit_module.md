@@ -82,11 +82,11 @@ There a few things introduced here that are part of the KBase Interface Descript
 
     typedef [type definition] [TypeName]
 
-The type definition can either be another previously defined type name, a primitive type (string, int, float), a container type (list, mapping) or a structure.  In this example we define a string named `contigset_id` and a structure named `CountContigResults` with a single integer field named `contig_count`.
+The type definition can either be another previously defined type name, a primitive type (string, int, float), a container type (list, mapping) or a structure.  In this example we define a string named `contigset_id` and a structure named `FilterContigResults` with a single integer field named `contig_count`.
 
 We can use any defined types as input/output parameters to functions.  We define functions using the `funcdef` keyword in this syntax:
 
-    funcdef method_name([input parameter list]]) returns ([output parameter list]);
+    funcdef method_name([input parameter list]) returns ([output parameter list]);
 
 Optionally, as we have shown in the example, your method can require authentication by adding that declaration at the end of the method.  In general, all your methods will require authentication.
 
