@@ -123,7 +123,7 @@ This will call `kb-sdk compile` with a set of parameters predefined for you.
 
 #### <A NAME="impl"></A>F. Edit Impl file
 
-In the lib/\<MyModule\>/ directory, edit the <MyModule>Impl.py (or *.pl) "Implementation" file that defines the methods available in the module.  You can follow this guide for interacting with [KBase Data Types](doc/kb_sdk_data_types.md).  Basically, the process consists of obtaining data objects from the KBase workspace, and either operating on them directly in code or writing them to scratch files that the tool you are wrapping will operate on.  Result data should be collected into KBase data objects and stored back in the workspace.
+In the lib/\<MyModule\>/ directory, edit the <MyModule>Impl.py (or *.pl) "Implementation" file that defines the methods available in the module.  You can follow this guide for interacting with [KBase Data Types](kb_sdk_data_types.md).  Basically, the process consists of obtaining data objects from the KBase workspace, and either operating on them directly in code or writing them to scratch files that the tool you are wrapping will operate on.  Result data should be collected into KBase data objects and stored back in the workspace.
 
 - F.1. [Using Data Types](#impl-data-types)
 - F.2. [Logging](#impl-logging)
@@ -134,7 +134,7 @@ In the lib/\<MyModule\>/ directory, edit the <MyModule>Impl.py (or *.pl) "Implem
 
 ##### <A NAME="impl-data-types"></A>F.1. Using Data Types
 
-Data objects are typed and structured in KBase.  You may write code that takes advantage of these structures, or extract the data from them to create files that the external tool you are wrapping requires (e.g. FASTA).  Please take advantage of the code snippets in the [KBase Data Types](doc/kb_sdk_data_types.md), you can also look at the [Examples](#examples) for syntax and style guidance.
+Data objects are typed and structured in KBase.  You may write code that takes advantage of these structures, or extract the data from them to create files that the external tool you are wrapping requires (e.g. FASTA).  Please take advantage of the code snippets in the [KBase Data Types](kb_sdk_data_types.md), you can also look at the [Examples](#examples) for syntax and style guidance.
 
 [\[Back to Edit Impl\]](#impl)
 
@@ -163,7 +163,7 @@ Logging where you are is key to tracking progress and debugging.  Our recommende
 
 ##### <A NAME="impl-provenance"></A>F.3. Provenance
 
-Data objects in KBase contain provenance (historical information of their creation and objects from which they are derived).  When you create new objects, you must carry forward and add provenance information to them.  Additionally, Report objects should receive that provenance data (see below).  Examples of adding provenance to objects can be found in the [KBase Data Types](docs/kb_sdk_data_types.md).
+Data objects in KBase contain provenance (historical information of their creation and objects from which they are derived).  When you create new objects, you must carry forward and add provenance information to them.  Additionally, Report objects should receive that provenance data (see below).  Examples of adding provenance to objects can be found in the [KBase Data Types](kb_sdk_data_types.md).
 
 ```python
         # load the method provenance from the context object
@@ -249,7 +249,7 @@ Data objects in KBase contain provenance (historical information of their creati
 
 ##### <A NAME="impl-adding-data"></A>F.6. Adding Data To Your Method
 
-Data that is supported by [KBase Data Types](doc/kb_sdk_data_types_table.md) should be added as a workspace object.  Other data that is used to configure a method may be added to the repo with the code.  Large data sets that exceed a reasonable limit (> 1 GB) should be added to a shared mount point.  This can be accomplished by contacting kbase administrators at http://kbase.us.
+Data that is supported by [KBase Data Types](kb_sdk_data_types_table.md) should be added as a workspace object.  Other data that is used to configure a method may be added to the repo with the code.  Large data sets that exceed a reasonable limit (> 1 GB) should be added to a shared mount point.  This can be accomplished by contacting kbase administrators at http://kbase.us.
 
 [\[Back to Edit Impl\]](#impl)
 
